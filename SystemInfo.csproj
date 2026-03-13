@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>icons\Appicon.ico</ApplicationIcon>
+    <AssemblyName>SystemInfo</AssemblyName>
+    <RootNamespace>SystemInfoApp</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>SystemInfoApp.Program</StartupObject>
+    <Nullable>enable</Nullable>
+    <Company>Miloch</Company>
+    <Product>System Info</Product>
+    <Authors>Miloch</Authors>
+    <Copyright>© 2026 Miloch</Copyright>
+    <Version>2.0.26.3</Version>
+    <AssemblyVersion>2.0.26.3</AssemblyVersion>
+    <FileVersion>2.0.26.3</FileVersion>
+    <Description>System and network information display tool</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icons\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </None>
+    <None Include="config\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </None>
+  </ItemGroup>
+
+</Project>
